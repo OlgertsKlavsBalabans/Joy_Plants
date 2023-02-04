@@ -45,9 +45,13 @@ public class Select : MonoBehaviour
         {
         switch (other.gameObject.tag)
         {
+            case "Plant":
+                isSelected = true;
+                selectedObject = other.gameObject;
+                    break;
             case "Selectable":
                 isSelected = true;
-                selectedObject = other.gameObject.transform.parent.gameObject.transform.parent.gameObject;
+                selectedObject = other.gameObject;
                 break;
             case "PotExplosion":
                 isSelected = true;
@@ -68,30 +72,6 @@ public class Select : MonoBehaviour
         }
         }
 
-
-        /*
-        if (other.gameObject.tag == "Selectable" && !isSelected)
-        {
-
-            //other.gameObject.GetComponent<MeshRenderer>().material = selectedMaterial;
-            isSelected = true;
-            selectedPot = other.gameObject;
-            Debug.Log("Selected");
-        }
-        if (other.gameObject.tag == "Button")
-        {
-            isButton = true; 
-            selectedButton = GameObject.Find(other.gameObject.name).GetComponent<Button>();
-            var colors = selectedButton.colors;
-            colors.selectedColor = Color.green;
-            selectedButton.colors = colors;
-            selectedButton.Select();
-        }
-        if (other.gameObject.tag == "PotExplosion")
-        {
-            isPotExplosion = true;
-        }
-        */
     }
 
     void OnTriggerExit(Collider other)
@@ -100,6 +80,7 @@ public class Select : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Selectable":
+            case "Plant":
             case "PotExplosion":
                 isSelected = false;
                 selectedObject = this.gameObject;
@@ -113,26 +94,6 @@ public class Select : MonoBehaviour
                 break;
         }
 
-        /*
-        if (isSelected && !isJoined)
-        {
-            //other.gameObject.GetComponent<MeshRenderer>().material = defaultMaterial;
-            isSelected = false;
-            Debug.Log("Released");
-
-        }
-        if (other.gameObject.tag == "Button")
-        {
-            EventSystem.current.SetSelectedGameObject(null);
-            isButton = false;
-
-        }
-        if (other.gameObject.tag == "PotExplosion")
-        {
-            selectedPotExplosion = other.gameObject;
-            isPotExplosion = false;
-        }
-        */
     }
 
     // Update is called once per frame
@@ -142,6 +103,7 @@ public class Select : MonoBehaviour
         {
             switch (selectedObject.tag)
             {
+                case "Plant":
                 case "Selectable":
                     keyPressedTime = Time.time;
                     break;
@@ -154,44 +116,29 @@ public class Select : MonoBehaviour
                 default:
                     break;
             }
-            /*
-            if (isButton)
-            {
-                Debug.Log("Button click ???");
-                selectedButton.onClick.Invoke();
 
-            }
-            if (isSelected && keyPressedTime != 0)
-            {
-                keyPressedTime = Time.time;
-
-            }
-            if (isPotExplosion)
-            {
-                selectedPotExplosion.gameObject.GetComponent<ExplodePots>().explodePots(3);
-            }
-            */
         }
         if (Input.GetKeyUp(KeyCode.E))
         {
             switch (selectedObject.tag)
             {
+                case "Plant":
+                    if (selectedObject.GetComponentInParent<PlantGrowth>().ready)
+                    {
+                        GlobalValues.Instance.happiness.increaseScore(selectedObject.GetComponentInParent<PlantGrowth>().GetComponent<PlantInfo>().ValuePerHarvest);
+                        selectedObject.GetComponentInParent<PlantGrowth>().restartGrowth();
+
+                    }
+                    break;
                 case "Selectable":
                     if ((Time.time - keyPressedTime) <= holdTimeForJoint)
                     {
-                        Debug.Log("SelectSelectableObject");
-                        if (selectedObject.GetComponentInChildren<PlantGrowth>().ready)
-                        {
-                            GlobalValues.Instance.happiness.increaseScore(selectedObject.GetComponentInChildren<PlantGrowth>().GetComponent<PlantInfo>().ValuePerHarvest);
-                            selectedObject.GetComponentInChildren<PlantGrowth>().restartGrowth();
-
-                        }
+                        selectedObject.GetComponentInParent<PotMenuToggle>().Toggle();
                     }
                     break;
                 case "PotExplosion":
                     break;
                 case "Button":
-                    selectedButton.onClick.Invoke();
                     break;
                 default:
                     break;
@@ -210,7 +157,7 @@ public class Select : MonoBehaviour
             //Debug.Log(isSelected);
             //Debug.Log((Time.time - keyPressedTime));
 
-            if (selectedObject.tag == "Selectable" && (Time.time - keyPressedTime) > holdTimeForJoint)
+            if ((selectedObject.tag == "Selectable" || selectedObject.tag == "Plant") && (Time.time - keyPressedTime) > holdTimeForJoint)
             {
                 Debug.Log("joined");
                 isJoined = true;

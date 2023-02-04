@@ -7,10 +7,8 @@ TagManager:
   - CinemachineTarget
   - Selectable
   - Button
-<<<<<<< Updated upstream
-=======
   - PotExplosion
->>>>>>> Stashed changes
+  - Plant
   layers:
   - Default
   - TransparentFX

@@ -28,8 +28,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8828430765469757615}
+  m_Children: []
   m_Father: {fileID: 7222266906817059739}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -67,6 +66,7 @@ GameObject:
   - component: {fileID: 7222266906817059739}
   - component: {fileID: 4573807127821170585}
   - component: {fileID: 2412341331037073448}
+  - component: {fileID: 7322061032243516924}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Selectable
@@ -129,51 +129,19 @@ MonoBehaviour:
   - {fileID: 5691463656533443728, guid: 4638fde28c141294fa7628c6cd3d2e64, type: 3}
   - {fileID: 5691463656533443728, guid: a2c82692c4020d44cac0a19af944ba6d, type: 3}
   - {fileID: 5691463656533443728, guid: f611be003fe1e094491becc064851234, type: 3}
---- !u!1 &8599341571054628315
-GameObject:
+--- !u!114 &7322061032243516924
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8828430765469757615}
-  - component: {fileID: 5284896739418759903}
-  m_Layer: 0
-  m_Name: PotCollider
-  m_TagString: Selectable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8828430765469757615
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8599341571054628315}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.46, y: 0.3, z: 0.23}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5278090475016045059}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5284896739418759903
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8599341571054628315}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_GameObject: {fileID: 8326292823190046117}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.7171191, y: 0.93201995, z: 1}
-  m_Center: {x: 0.015378052, y: -0.11083513, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2806857bca33ef34caa5e702d45a5447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Menu: {fileID: 1065632379682583204}
 --- !u!1001 &2854966668689972662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +304,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2978851945348525842, guid: 6ba1bc4338e9635498ae3aec20672f66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2978851945348525843, guid: 6ba1bc4338e9635498ae3aec20672f66,
         type: 3}
       propertyPath: m_RootOrder
@@ -468,6 +441,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba1bc4338e9635498ae3aec20672f66, type: 3}
+--- !u!1 &1065632379682583204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2978851945348525842, guid: 6ba1bc4338e9635498ae3aec20672f66,
+    type: 3}
+  m_PrefabInstance: {fileID: 2854966668689972662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1065632379682583205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2978851945348525843, guid: 6ba1bc4338e9635498ae3aec20672f66,
