@@ -49,3 +49,55 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ed001d59a98668649b3a9239a1613fa0, type: 3}
     volume: 1
     source: {fileID: 0}
+  - name: Doorbell
+    clip: {fileID: 8300000, guid: cb4f991e4162a524789623d4918d7f55, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Door_open
+    clip: {fileID: 8300000, guid: 29035f81ada2b5e41a37c2a21520ff88, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Door_close
+    clip: {fileID: 8300000, guid: 5f9956184f3a2124e879e2c5095319ed, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Throw_woosh
+    clip: {fileID: 8300000, guid: 291a49f343165934a9fd96fe894e66c8, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Pot_fall
+    clip: {fileID: 8300000, guid: 93e58eb0a0290474ebfdba7951a790e9, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Box_fall
+    clip: {fileID: 8300000, guid: ab1e039460978b840a6c31e71e773a43, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Digging
+    clip: {fileID: 8300000, guid: e245ea88fe12bdb42b8ac4419ae4f1af, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Pour_on_soil
+    clip: {fileID: 8300000, guid: 613ad5c8d854b294a895b2ac7afce72e, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Pour_in_can
+    clip: {fileID: 8300000, guid: ac743b3ede20a134b92f32bc310ecffa, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Knock_normal
+    clip: {fileID: 8300000, guid: 78ad1394954f6c948bc48aa88b59a80b, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Knock_stressed
+    clip: {fileID: 8300000, guid: b7f0068cbc0367c4b8587887e119d2c5, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Knock_angry
+    clip: {fileID: 8300000, guid: cf66b79afeb6b2d41897fde60b85efce, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Footsteps
+    clip: {fileID: 8300000, guid: ed001d59a98668649b3a9239a1613fa0, type: 3}
+    volume: 1
+    source: {fileID: 0}
