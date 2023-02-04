@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
 
 public class Select : MonoBehaviour
 
@@ -13,6 +16,8 @@ public class Select : MonoBehaviour
     SpringJoint joint;
     bool isSelected;
     bool isJoined;
+    bool isButton;
+    Button selectedButton;
     float keyPressedTime;
     GameObject selectedPot;
     // Start is called before the first frame update
@@ -20,6 +25,7 @@ public class Select : MonoBehaviour
     {
         isSelected = false;
         isJoined = false;
+        isButton = false;
         keyPressedTime = 0;
     }
 
@@ -37,6 +43,15 @@ public class Select : MonoBehaviour
             selectedPot = other.gameObject;
             Debug.Log("Selected");
         }
+        if (other.gameObject.tag == "Button")
+        {
+            isButton = true; 
+            selectedButton = GameObject.Find(other.gameObject.name).GetComponent<Button>();
+            var colors = selectedButton.colors;
+            colors.selectedColor = Color.green;
+            selectedButton.colors = colors;
+            selectedButton.Select();
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -50,14 +65,31 @@ public class Select : MonoBehaviour
             Debug.Log("Released");
 
         }
+        if (other.gameObject.tag == "Button")
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            isButton = false;
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isSelected && keyPressedTime != 0)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            keyPressedTime = Time.time;
+
+            if (isButton)
+            {
+                Debug.Log("Button click ???");
+                selectedButton.onClick.Invoke();
+
+            }
+            if (isSelected && keyPressedTime != 0)
+            {
+                keyPressedTime = Time.time;
+
+            }
         }
         if (Input.GetKeyUp(KeyCode.E) && isJoined)
         {
@@ -65,11 +97,12 @@ public class Select : MonoBehaviour
 
             isJoined = false;
             joint.connectedBody = null;
+            keyPressedTime = 0;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
-            Debug.Log(isSelected);
-            Debug.Log((Time.time - keyPressedTime));
+            //Debug.Log(isSelected);
+            //Debug.Log((Time.time - keyPressedTime));
 
             if (isSelected && (Time.time - keyPressedTime) > 1)
             {
@@ -80,6 +113,6 @@ public class Select : MonoBehaviour
                 joint.connectedBody = selectedPot.GetComponentInParent<Rigidbody>();
             }
         }
-
+        
     }
 }
