@@ -48,6 +48,7 @@ MonoBehaviour:
   Name: Sunflower
   GrowTime: 15
   ValuePerHarvest: 100
+  buttonIndex: 2
 --- !u!1 &7532624274805681410
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,6 +48,7 @@ MonoBehaviour:
   Name: Rose
   GrowTime: 3840
   ValuePerHarvest: 100000
+  buttonIndex: 8
 --- !u!1 &7532624274805681410
 GameObject:
   m_ObjectHideFlags: 0

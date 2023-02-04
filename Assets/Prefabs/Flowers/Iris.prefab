@@ -48,6 +48,7 @@ MonoBehaviour:
   Name: Iris
   GrowTime: 960
   ValuePerHarvest: 20000
+  buttonIndex: 6
 --- !u!1 &7532624274805681410
 GameObject:
   m_ObjectHideFlags: 0

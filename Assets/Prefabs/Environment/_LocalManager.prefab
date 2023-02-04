@@ -44,3 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c10ecec1690854988ec9d03ede5b44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plantPrefabs:
+  - {fileID: 5691463656533443728, guid: 3bae5a6d65123c64fa5eff343630d67c, type: 3}
+  - {fileID: 5691463656533443728, guid: 9a550cca77e2d8c4c9aab1c4003ee77e, type: 3}
+  - {fileID: 5691463656533443728, guid: d675bb19f483fbb498557528ce052c39, type: 3}
+  - {fileID: 5691463656533443728, guid: e7788adffcb0a4a4496e08372a485c66, type: 3}
+  - {fileID: 5691463656533443728, guid: f8555b88679b33349b26516ba4b01a92, type: 3}
+  - {fileID: 5691463656533443728, guid: 62da6369e6d42fc4a8a7eee1676eaf63, type: 3}
+  - {fileID: 5691463656533443728, guid: 4638fde28c141294fa7628c6cd3d2e64, type: 3}
+  - {fileID: 5691463656533443728, guid: a2c82692c4020d44cac0a19af944ba6d, type: 3}
+  - {fileID: 5691463656533443728, guid: f611be003fe1e094491becc064851234, type: 3}

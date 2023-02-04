@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 7680247727394477875}
   - component: {fileID: 8773858406950676171}
   - component: {fileID: 8510700239399345507}
+  - component: {fileID: 6067916448490124382}
   m_Layer: 0
   m_Name: CameraRay
   m_TagString: Untagged
@@ -158,7 +159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8500349636530552161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.617}
+  m_LocalPosition: {x: 0, y: 0, z: 0.79}
   m_LocalScale: {x: 0.01, y: 0.01, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -216,7 +217,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterial: {fileID: 2100000, guid: 2d194e6adae81434298b104f3d310163, type: 2}
   selectedMaterial: {fileID: 2100000, guid: b6b224234ecb0c14bb8f60f5bada8c9a, type: 2}
-  joint: {fileID: 0}
+  joint: {fileID: 6067916448490124382}
+--- !u!145 &6067916448490124382
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500349636530552161}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Spring: 10
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 0
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &8616685848737228372
 GameObject:
   m_ObjectHideFlags: 0
