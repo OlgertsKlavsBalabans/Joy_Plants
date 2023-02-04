@@ -13,12 +13,13 @@ public class StateManager : MonoBehaviour
     GameObject mainMenuCanvas;
     public void onStartGame()
     {
-        player.GetComponent<StarterAssetsInputs>().cursorLocked = true;
-
+         Cursor.lockState = CursorLockMode.Locked;
+         player.GetComponent<StarterAssetsInputs>().cursorInputForLook = true;
+         mainMenuCanvas.SetActive(false);
     }
     public void onExitGame()
     {
-
+        Application.Quit();
     }
 }
 }
