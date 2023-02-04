@@ -569,8 +569,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bebd56128cd82724fa16f873b21fe415,
+        type: 3}
+      propertyPath: m_TagString
+      value: PotExplosion
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bebd56128cd82724fa16f873b21fe415, type: 3}
+--- !u!1 &8289862926316135461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bebd56128cd82724fa16f873b21fe415,
+    type: 3}
+  m_PrefabInstance: {fileID: 9208431568111917428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1944220002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8289862926316135461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16384144, y: 2.2411919, z: 1.446213}
+  m_Center: {x: 0.020746546, y: 0.0000011920929, z: -0.009352984}
+--- !u!114 &1944219998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8289862926316135461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d02d84486ea6b049a46269ce14467c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pot: {fileID: 8326292823190046117, guid: c32f51292b2ba2b4b987118044baa625, type: 3}
 --- !u!4 &8665016686798225055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bebd56128cd82724fa16f873b21fe415,
