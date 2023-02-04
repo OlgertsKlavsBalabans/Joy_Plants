@@ -101,3 +101,19 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ed001d59a98668649b3a9239a1613fa0, type: 3}
     volume: 1
     source: {fileID: 0}
+  - name: Water_sink_start
+    clip: {fileID: 8300000, guid: d303404c4a27dec47b8bbf48247df755, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Water_sink
+    clip: {fileID: 8300000, guid: 72b6e168f156ddd40bf02f5a371cd754, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Water_sink_stop
+    clip: {fileID: 8300000, guid: f102d032085d40b43979b9ce07767b26, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: UI click
+    clip: {fileID: 8300000, guid: 2bddc05d7756e954fb0c9e62a29209b6, type: 3}
+    volume: 1
+    source: {fileID: 0}
