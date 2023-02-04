@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5691463656533443728
+--- !u!1 &4629604154511255739
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,74 +8,67 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5774136604264201446}
-  - component: {fileID: 321647168684686579}
+  - component: {fileID: 4629604154511255742}
+  - component: {fileID: 4629604154511255872}
+  - component: {fileID: 4629604154511255743}
+  - component: {fileID: 4629604154511255873}
   m_Layer: 0
-  m_Name: Lilie
+  m_Name: _GlobalManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5774136604264201446
+--- !u!4 &4629604154511255742
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5691463656533443728}
+  m_GameObject: {fileID: 4629604154511255739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.24, y: 2.855, z: -1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4805498177004631635}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &321647168684686579
+--- !u!114 &4629604154511255872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5691463656533443728}
+  m_GameObject: {fileID: 4629604154511255739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6754f7564462576478336c65cfd0df16, type: 3}
+  m_Script: {fileID: 11500000, guid: 727b83ca3858d094dbfcce3bcde16a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Lilie
-  GrowTime: 480
-  ValuePerHarvest: 10000
---- !u!1 &7532624274805681410
-GameObject:
+  happiness: {fileID: 0}
+--- !u!114 &4629604154511255743
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4805498177004631635}
-  m_Layer: 0
-  m_Name: Model
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4805498177004631635
-Transform:
+  m_GameObject: {fileID: 4629604154511255739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727b83ca3858d094dbfcce3bcde16a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happiness: {fileID: 4629604154511255873}
+--- !u!114 &4629604154511255873
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7532624274805681410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5774136604264201446}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 4629604154511255739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465fd4b7714010e43b7e0edb804fc2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

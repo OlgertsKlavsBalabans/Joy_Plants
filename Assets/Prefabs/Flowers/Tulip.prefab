@@ -48,6 +48,7 @@ MonoBehaviour:
   Name: Tulip
   GrowTime: 30
   ValuePerHarvest: 500
+  buttonIndex: 1
 --- !u!1 &7532624274805681410
 GameObject:
   m_ObjectHideFlags: 0

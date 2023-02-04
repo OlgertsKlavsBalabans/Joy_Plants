@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5774136604264201446}
   - component: {fileID: 321647168684686579}
   m_Layer: 0
-  m_Name: Orchid
+  m_Name: Lily
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6754f7564462576478336c65cfd0df16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Orchid
-  GrowTime: 1920
-  ValuePerHarvest: 50000
-  buttonIndex: 7
+  Name: Lilie
+  GrowTime: 480
+  ValuePerHarvest: 10000
+  buttonIndex: 4
 --- !u!1 &7532624274805681410
 GameObject:
   m_ObjectHideFlags: 0
