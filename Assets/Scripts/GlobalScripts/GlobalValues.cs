@@ -4,6 +4,7 @@ public class GlobalValues : MonoBehaviour
 {
     public static GlobalValues Instance;
     public HappinessScore happiness = new HappinessScore();
+    public GameObject HappinessLabel;
 
     private void Start()
     {

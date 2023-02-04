@@ -180,6 +180,12 @@ public class Select : MonoBehaviour
                     if ((Time.time - keyPressedTime) <= holdTimeForJoint)
                     {
                         Debug.Log("SelectSelectableObject");
+                        if (selectedObject.GetComponentInChildren<PlantGrowth>().ready)
+                        {
+                            GlobalValues.Instance.happiness.increaseScore(selectedObject.GetComponentInChildren<PlantGrowth>().GetComponent<PlantInfo>().ValuePerHarvest);
+                            selectedObject.GetComponentInChildren<PlantGrowth>().restartGrowth();
+
+                        }
                     }
                     break;
                 case "PotExplosion":

@@ -218,7 +218,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 2d194e6adae81434298b104f3d310163, type: 2}
   selectedMaterial: {fileID: 2100000, guid: b6b224234ecb0c14bb8f60f5bada8c9a, type: 2}
   joint: {fileID: 6067916448490124382}
-  holdTimeForJoint: 0.2
+  holdTimeForJoint: 0.1
 --- !u!145 &6067916448490124382
 SpringJoint:
   m_ObjectHideFlags: 0

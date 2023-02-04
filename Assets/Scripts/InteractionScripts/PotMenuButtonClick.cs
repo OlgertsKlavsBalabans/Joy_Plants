@@ -12,16 +12,22 @@ public class PotMenuButtonClick : MonoBehaviour
     {
         Debug.Log("Button clicked " + id );
         GameObject boughtPlant;
-        Debug.Log(plantPrefabs.Count);
 
         for (int i = 0; i < plantPrefabs.Count; i++)
         {
-           Debug.Log(plantPrefabs[i]);
-
-           Debug.Log(plantPrefabs[i].GetComponent<PlantInfo>().name);
-
             if (plantPrefabs[i].GetComponent<PlantInfo>().buttonIndex == id)
             {
+                for (var j = this.transform.childCount - 1; j >= 0; j--)
+                {
+                    Debug.Log(this.transform.GetChild(0).gameObject.name);
+                    Debug.Log(this.transform.GetChild(0).gameObject.name.Contains("Clone"));
+                    if (this.transform.GetChild(j).gameObject.name.Contains("Clone"))
+                    {
+                        Destroy(this.transform.GetChild(j).gameObject);
+                    }
+                }
+
+                
                 Debug.Log("Planting " + plantPrefabs[i].GetComponent<PlantInfo>().name);
                 boughtPlant = plantPrefabs[i];
                 var position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 0.3f, this.gameObject.transform.position.z);
