@@ -17,15 +17,18 @@ public class Select : MonoBehaviour
     bool isSelected;
     bool isJoined;
     bool isButton;
+    bool isPotExplosion;
     Button selectedButton;
     float keyPressedTime;
     GameObject selectedPot;
+    GameObject selectedPotExplosion;
     // Start is called before the first frame update
     void Start()
     {
         isSelected = false;
         isJoined = false;
         isButton = false;
+        isPotExplosion = false;
         keyPressedTime = 0;
     }
 
@@ -52,6 +55,10 @@ public class Select : MonoBehaviour
             selectedButton.colors = colors;
             selectedButton.Select();
         }
+        if (other.gameObject.tag == "PotExplosion")
+        {
+            isPotExplosion = true;
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -70,6 +77,11 @@ public class Select : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             isButton = false;
 
+        }
+        if (other.gameObject.tag == "PotExplosion")
+        {
+            selectedPotExplosion = other.gameObject;
+            isPotExplosion = false;
         }
     }
 
@@ -90,6 +102,11 @@ public class Select : MonoBehaviour
                 keyPressedTime = Time.time;
 
             }
+            if (isPotExplosion)
+            {
+                selectedPotExplosion.gameObject.GetComponent<ExplodePots>().explodePots(3);
+            }
+
         }
         if (Input.GetKeyUp(KeyCode.E) && isJoined)
         {

@@ -10,7 +10,7 @@ public class MeshChooser : MonoBehaviour
     void Start()
     {
         int chosenPot = Random.Range(0, potList.Count);
-        Instantiate(potList[chosenPot], this.transform);
+        Instantiate(potList[chosenPot], this.transform).AddComponent<BoxCollider>();
     }
 
 }
