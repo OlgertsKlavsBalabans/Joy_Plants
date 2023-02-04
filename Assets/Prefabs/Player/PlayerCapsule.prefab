@@ -159,8 +159,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8500349636530552161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.79}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 1.164}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4135013735270702856}
@@ -218,6 +218,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: 2d194e6adae81434298b104f3d310163, type: 2}
   selectedMaterial: {fileID: 2100000, guid: b6b224234ecb0c14bb8f60f5bada8c9a, type: 2}
   joint: {fileID: 6067916448490124382}
+  holdTimeForJoint: 0.2
 --- !u!145 &6067916448490124382
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -231,11 +232,11 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 100
   m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
+  m_MinDistance: 0.005
+  m_MaxDistance: 0.02
+  m_Tolerance: 0.005
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
@@ -312,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 4
   SprintSpeed: 6
-  RotationSpeed: 1
+  RotationSpeed: 3
   SpeedChangeRate: 10
   JumpHeight: 1.2
   Gravity: -15
@@ -361,8 +362,8 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
+  cursorLocked: 0
+  cursorInputForLook: 0
 --- !u!114 &8616685848737228376
 MonoBehaviour:
   m_ObjectHideFlags: 0

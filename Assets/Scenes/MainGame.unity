@@ -198,41 +198,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5420857361349278248, guid: ae9665d9635d2d747b13fc5a602e9fd8,
-        type: 3}
-      propertyPath: cursorLocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5420857361349278248, guid: ae9665d9635d2d747b13fc5a602e9fd8,
-        type: 3}
-      propertyPath: cursorInputForLook
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6067916448490124382, guid: ae9665d9635d2d747b13fc5a602e9fd8,
-        type: 3}
-      propertyPath: m_Spring
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6067916448490124382, guid: ae9665d9635d2d747b13fc5a602e9fd8,
-        type: 3}
-      propertyPath: m_Tolerance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 6067916448490124382, guid: ae9665d9635d2d747b13fc5a602e9fd8,
-        type: 3}
-      propertyPath: m_MaxDistance
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 6067916448490124382, guid: ae9665d9635d2d747b13fc5a602e9fd8,
-        type: 3}
-      propertyPath: m_MinDistance
-      value: 0.005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8616685848737228371, guid: ae9665d9635d2d747b13fc5a602e9fd8,
-        type: 3}
-      propertyPath: RotationSpeed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: ae9665d9635d2d747b13fc5a602e9fd8,
         type: 3}
       propertyPath: m_Name
@@ -387,16 +352,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
-        type: 3}
-      propertyPath: far clip plane
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
-        type: 3}
-      propertyPath: orthographic size
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -778,6 +733,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StartMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 738153554148785714, guid: 0b2e077c45e38b24881298b5b8885804,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2e077c45e38b24881298b5b8885804, type: 3}
