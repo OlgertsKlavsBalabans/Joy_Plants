@@ -124,7 +124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7669622523855785724}
         m_TargetAssemblyTypeName: PotCount, Assembly-CSharp
         m_MethodName: getPot
         m_Mode: 1
