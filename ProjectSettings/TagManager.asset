@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Selectable
+  - Button
+  - PotExplosion
+  - Plant
   layers:
   - Default
   - TransparentFX
