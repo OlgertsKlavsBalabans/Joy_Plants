@@ -32,7 +32,7 @@ public class HappinessScore : MonoBehaviour
 
     public void resetScore()
     {
-        happinessScore = 10000;
+        happinessScore = 300;
         GlobalValues.Instance.HappinessLabel.GetComponent<TMPro.TextMeshProUGUI>().text = happinessScore.ToString();
     }
 }
