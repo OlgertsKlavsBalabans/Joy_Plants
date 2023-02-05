@@ -39,7 +39,7 @@ public class Select : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter");
+        //Debug.Log("OnTriggerEnter");
         //Debug.Log(isSelected);
         //Debug.Log(other);
 
@@ -80,7 +80,7 @@ public class Select : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         selectedObject.layer = 0;
-        Debug.Log("OnTriggerExit");
+        //Debug.Log("OnTriggerExit");
         switch (other.gameObject.tag)
         {
             case "Selectable":
@@ -151,23 +151,23 @@ public class Select : MonoBehaviour
             }
             if (isJoined == true){
                 isJoined = false;
-                Debug.Log(transform.TransformPoint(Vector3.zero) - PastPositions[0]);
+                //Debug.Log(transform.TransformPoint(Vector3.zero) - PastPositions[0]);
                 joint.connectedBody.velocity = (transform.TransformPoint(Vector3.zero) - PastPositions[0] )*10;
                 joint.connectedBody = null;
                 keyPressedTime = 0;
-                Debug.Log("joint Released");
+                //Debug.Log("joint Released");
             }
 
         }
         if (Input.GetKey(KeyCode.E))
         {
-            Debug.Log(selectedObject);
+            //Debug.Log(selectedObject);
             //Debug.Log(isSelected);
             //Debug.Log((Time.time - keyPressedTime));
 
             if ((selectedObject.tag == "Selectable" || selectedObject.tag == "Plant") && (Time.time - keyPressedTime) > holdTimeForJoint)
             {
-                Debug.Log("joined");
+                //Debug.Log("joined");
                 isJoined = true;
                 joint.connectedBody = selectedObject.GetComponentInParent<Rigidbody>();
             }

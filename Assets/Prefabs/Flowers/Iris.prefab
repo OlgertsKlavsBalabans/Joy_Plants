@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Iris
   GrowTime: 960
-  ValuePerHarvest: 20000
+  ValuePerHarvest: 10000
   buttonIndex: 6
-  Price: 12000
+  Price: 3000
 --- !u!114 &7624497906546521493
 MonoBehaviour:
   m_ObjectHideFlags: 0
