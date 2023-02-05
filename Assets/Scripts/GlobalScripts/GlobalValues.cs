@@ -3,12 +3,15 @@ using UnityEngine;
 public class GlobalValues : MonoBehaviour
 {
     public static GlobalValues Instance;
-    public HappinessScore happiness = new HappinessScore();
+    public HappinessScore happiness;
     public GameObject HappinessLabel;
+    
 
     private void Start()
     {
         Instance = this;
+        happiness = new HappinessScore();
+        happiness.resetScore();
         //newGame.startNewGame();
     }
     private void Awake()
