@@ -148,6 +148,7 @@ MonoBehaviour:
   GrowTime: 30
   ValuePerHarvest: 500
   buttonIndex: 1
+  Price: 200
 --- !u!114 &977150943676590415
 MonoBehaviour:
   m_ObjectHideFlags: 0

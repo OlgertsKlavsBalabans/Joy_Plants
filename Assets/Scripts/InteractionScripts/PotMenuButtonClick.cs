@@ -33,6 +33,7 @@ public class PotMenuButtonClick : MonoBehaviour
                 var position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 0.3f, this.gameObject.transform.position.z);
                 var newPlant = Instantiate(boughtPlant, position, Quaternion.identity);
                 newPlant.transform.parent = this.gameObject.transform;
+                GlobalValues.Instance.happiness.decreaseScore(plantPrefabs[i].GetComponent<PlantInfo>().Price);
                 break;
             }
         }

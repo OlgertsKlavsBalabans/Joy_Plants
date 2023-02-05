@@ -18,15 +18,20 @@ public class PlantGrowth : MonoBehaviour
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
+            float percentDone =  (this.GetComponent<PlantInfo>().GrowTime - timeRemaining) / this.GetComponent<PlantInfo>().GrowTime;
+            this.GetComponentInParent<Rigidbody>().gameObject.GetComponentInChildren<RadialProgressManager>().setValue(percentDone);
         }
         else
         {
             ready = true;
+            this.GetComponentInParent<Rigidbody>().gameObject.GetComponentInChildren<RadialProgressManager>().setValue(100);
+
         }
     }
     public void restartGrowth()
     {
         timeRemaining = this.GetComponent<PlantInfo>().GrowTime;
         ready = false;
+        this.GetComponentInParent<Rigidbody>().gameObject.GetComponentInChildren<RadialProgressManager>().setValue(0);
     }
 }

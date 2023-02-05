@@ -8,4 +8,5 @@ public class PlantInfo : MonoBehaviour
     public float GrowTime;
     public int ValuePerHarvest;
     public int buttonIndex;
+    public int Price;
 }
