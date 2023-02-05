@@ -113,7 +113,8 @@ public class Select : MonoBehaviour
                     keyPressedTime = Time.time;
                     break;
                 case "PotExplosion":
-                    selectedObject.GetComponent<ExplodePots>().explodePots(3);
+                    selectedObject.GetComponent<ExplodePots>().explodePotsDestroy(3);
+                    selectedObject = this.gameObject;
                     break;
                 case "Button":
                     selectedButton.onClick.Invoke();
