@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Marigold
   GrowTime: 240
-  ValuePerHarvest: 5000
+  ValuePerHarvest: 2000
   buttonIndex: 3
   Price: 3000
 --- !u!114 &2727296953308027765

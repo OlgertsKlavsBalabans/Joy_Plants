@@ -37,8 +37,6 @@ public class PotCount : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(potsGot);
-        Debug.Log(potPrice.Length);
         if (potsGot == potPrice.Length - 1)
         {
             priceLabel.GetComponent<TMPro.TextMeshProUGUI>().text = "No more pots available";

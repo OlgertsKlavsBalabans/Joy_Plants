@@ -8,10 +8,13 @@ public class HappinessScore : MonoBehaviour
     {
         happinessScore = happinessScore + amount;
         GlobalValues.Instance.HappinessLabel.GetComponent<TMPro.TextMeshProUGUI>().text = happinessScore.ToString();
+        Debug.Log(happinessScore); 
     }
 
     public void decreaseScore(int amount)
     {
+        Debug.Log(happinessScore);
+
         if (happinessScore >= amount)
         {
             happinessScore = happinessScore - amount;
@@ -21,13 +24,15 @@ public class HappinessScore : MonoBehaviour
         {
             Debug.Log("Not enough happiness");
         }
+        Debug.Log(happinessScore);
+
 
     }
 
 
     public void resetScore()
     {
-        happinessScore = 30000;
+        happinessScore = 10000;
         GlobalValues.Instance.HappinessLabel.GetComponent<TMPro.TextMeshProUGUI>().text = happinessScore.ToString();
     }
 }

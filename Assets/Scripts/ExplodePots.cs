@@ -20,4 +20,10 @@ public class ExplodePots : MonoBehaviour
             Instantiate(pot, explosionLocation.transform).GetComponent<Rigidbody>().AddExplosionForce(2f,explosionLocation.transform.position,2f,1f);
         }
     }
+
+    public void explodePotsDestroy(int amount)
+    {
+        explodePots(amount);
+        Destroy(this.gameObject);
+    }
 }
