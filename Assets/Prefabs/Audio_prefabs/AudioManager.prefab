@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf923ba16eec654f962214498e84336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: FallSound
+    clip: {fileID: 8300000, guid: fa658a0a62ba9344ba6447d69af01839, type: 3}
+    volume: 1
+    source: {fileID: 0}
