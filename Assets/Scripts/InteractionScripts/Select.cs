@@ -13,7 +13,7 @@ public class Select : MonoBehaviour
     [SerializeField]
     Material selectedMaterial;
     [SerializeField]
-    SpringJoint joint;
+    HingeJoint joint;
     [SerializeField]
     float holdTimeForJoint;
     bool isSelected;
@@ -25,6 +25,9 @@ public class Select : MonoBehaviour
     GameObject selectedPot;
     GameObject selectedPotExplosion;
     GameObject selectedObject;
+    Color originalColor;
+
+    List<Vector3> PastPositions = new List<Vector3>{};
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +37,6 @@ public class Select : MonoBehaviour
         isPotExplosion = false;
         keyPressedTime = 0;
     }
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OnTriggerEnter");
@@ -70,12 +72,15 @@ public class Select : MonoBehaviour
             default:
                 break;
         }
+            //originalColor = selectedObject.GetComponent<MeshRenderer>().materials[0].color;
+            //selectedObject.GetComponent<MeshRenderer>().materials[0].color = Color.green;
         }
 
     }
 
     void OnTriggerExit(Collider other)
     {
+        //selectedObject.GetComponent<MeshRenderer>().materials[0].color = originalColor;
         Debug.Log("OnTriggerExit");
         switch (other.gameObject.tag)
         {
@@ -93,12 +98,13 @@ public class Select : MonoBehaviour
             default:
                 break;
         }
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
             switch (selectedObject.tag)
@@ -145,6 +151,8 @@ public class Select : MonoBehaviour
             }
             if (isJoined == true){
                 isJoined = false;
+                Debug.Log(transform.TransformPoint(Vector3.zero) - PastPositions[0]);
+                joint.connectedBody.velocity = (transform.TransformPoint(Vector3.zero) - PastPositions[0] )*10;
                 joint.connectedBody = null;
                 keyPressedTime = 0;
                 Debug.Log("joint Released");
@@ -165,5 +173,9 @@ public class Select : MonoBehaviour
             }
         }
         
+        if (PastPositions.Count >= 10) {
+            PastPositions.RemoveAt(0);
+        }
+        PastPositions.Add(transform.TransformPoint(Vector3.zero));
     }
 }

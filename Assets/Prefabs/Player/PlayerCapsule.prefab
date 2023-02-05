@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 7680247727394477875}
   - component: {fileID: 8773858406950676171}
   - component: {fileID: 8510700239399345507}
-  - component: {fileID: 6067916448490124382}
+  - component: {fileID: 846120593}
   m_Layer: 0
   m_Name: CameraRay
   m_TagString: Untagged
@@ -217,10 +217,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterial: {fileID: 2100000, guid: 2d194e6adae81434298b104f3d310163, type: 2}
   selectedMaterial: {fileID: 2100000, guid: b6b224234ecb0c14bb8f60f5bada8c9a, type: 2}
-  joint: {fileID: 6067916448490124382}
-  holdTimeForJoint: 0.1
---- !u!145 &6067916448490124382
-SpringJoint:
+  joint: {fileID: 846120593}
+  holdTimeForJoint: 0.2
+--- !u!59 &846120593
+HingeJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -229,14 +229,26 @@ SpringJoint:
   m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  serializedVersion: 2
-  m_Spring: 100
-  m_Damper: 0.2
-  m_MinDistance: 0.005
-  m_MaxDistance: 0.02
-  m_Tolerance: 0.005
+  m_UseSpring: 1
+  m_Spring:
+    spring: 0.1
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_EnableCollision: 0
