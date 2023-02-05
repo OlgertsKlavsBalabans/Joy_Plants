@@ -72,15 +72,14 @@ public class Select : MonoBehaviour
             default:
                 break;
         }
-            //originalColor = selectedObject.GetComponent<MeshRenderer>().materials[0].color;
-            //selectedObject.GetComponent<MeshRenderer>().materials[0].color = Color.green;
+            selectedObject.layer = 3;
         }
 
     }
 
     void OnTriggerExit(Collider other)
     {
-        //selectedObject.GetComponent<MeshRenderer>().materials[0].color = originalColor;
+        selectedObject.layer = 0;
         Debug.Log("OnTriggerExit");
         switch (other.gameObject.tag)
         {
