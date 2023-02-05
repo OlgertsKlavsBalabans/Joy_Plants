@@ -8,12 +8,16 @@ public class ExplodePots : MonoBehaviour
     [SerializeField]
     GameObject pot;
 
+    [SerializeField]
+    GameObject explosionLocation;
+
 
     public void explodePots (int amount)
     {
+
         for (var i = 0; i < amount; i++)
         {
-            Instantiate(pot, this.transform).GetComponent<Rigidbody>().AddExplosionForce(1f,this.transform.position,1f,0.5f);
+            Instantiate(pot, explosionLocation.transform).GetComponent<Rigidbody>().AddExplosionForce(2f,explosionLocation.transform.position,2f,1f);
         }
     }
 }

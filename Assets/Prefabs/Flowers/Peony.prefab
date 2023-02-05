@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5774136604264201446}
   - component: {fileID: 321647168684686579}
+  - component: {fileID: 2320048837260825758}
   m_Layer: 0
   m_Name: Peony
   m_TagString: Untagged
@@ -49,6 +50,21 @@ MonoBehaviour:
   GrowTime: 120
   ValuePerHarvest: 5000
   buttonIndex: 5
+  Price: 1000
+--- !u!114 &2320048837260825758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5691463656533443728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54aa8a969f4fcfe48a0df34b00d94207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 0
+  ready: 0
 --- !u!1 &7532624274805681410
 GameObject:
   m_ObjectHideFlags: 0
