@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PotCount : MonoBehaviour
 {
     public int potsGot { get; set; } = 0;
-    public int[] potPrice = {5700, 58500, 132000, 234000, 453750, 645000, 858750, 1350000, 1598437, 1743750 };
+    public int[] potPrice = {5000, 25000, 50000, 100000, 200000, 350000, 500000, 750000, 1000000, 5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000 };
     [SerializeField]
     GameObject notEnoughLabel;
     [SerializeField]

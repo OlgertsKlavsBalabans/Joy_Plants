@@ -498,6 +498,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2412341331037073448}
+    - target: {fileID: 2978851946121399963, guid: 6ba1bc4338e9635498ae3aec20672f66,
+        type: 3}
+      propertyPath: m_text
+      value: Cactus
+      objectReference: {fileID: 0}
     - target: {fileID: 2978851946262097379, guid: 6ba1bc4338e9635498ae3aec20672f66,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.b

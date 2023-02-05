@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Lilie
-  GrowTime: 480
+  GrowTime: 240
   ValuePerHarvest: 5000
   buttonIndex: 4
   Price: 1500
