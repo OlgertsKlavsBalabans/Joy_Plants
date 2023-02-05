@@ -6,6 +6,7 @@ public class HappinessScore : MonoBehaviour
 
     public void increaseScore(int amount)
     {
+        GlobalValues.Instance.audioSources[Random.Range(8, 11)].Play(0);
         happinessScore = happinessScore + amount;
         GlobalValues.Instance.HappinessLabel.GetComponent<TMPro.TextMeshProUGUI>().text = happinessScore.ToString();
         Debug.Log(happinessScore); 

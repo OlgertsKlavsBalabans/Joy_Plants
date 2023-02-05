@@ -23,16 +23,27 @@ public class PotCount : MonoBehaviour
             int price = potPrice[potsGot];
             if (price <= GlobalValues.Instance.happiness.happinessScore)
             {
-                potsGot++;
-                GlobalValues.Instance.happiness.decreaseScore(price);
-                doors.GetComponent<ExplodePots>().explodePots(3);
-
+                Debug.Log("StartingCorutine !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                StartCoroutine(getPotsDelay(price));
             }
             else
             {
                 notEnoughLabel.GetComponent<TMPro.TextMeshProUGUI>().text = "You do not have enough happiness \nto buy more pots!";
             }
         }
+    }
+    IEnumerator getPotsDelay(int price)
+    {
+        int chosenAudio =Random.Range(12, 14);
+        GlobalValues.Instance.audioSources[chosenAudio].Play(0);
+        yield return new WaitUntil(() => GlobalValues.Instance.audioSources[chosenAudio].isPlaying == false);
+        GlobalValues.Instance.audioSources[15].Play(0);
+        yield return new WaitUntil(() => GlobalValues.Instance.audioSources[15].isPlaying == false);
+        potsGot++;
+        GlobalValues.Instance.happiness.decreaseScore(price);
+        doors.GetComponent<ExplodePots>().explodePots(3);
+        GlobalValues.Instance.audioSources[16].Play(0);
+        yield return new WaitUntil(() => GlobalValues.Instance.audioSources[16].isPlaying == false);
     }
 
     private void Update()
