@@ -1,12 +1,12 @@
 using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
 public class GlobalValues : MonoBehaviour
 {
     public static GlobalValues Instance;
     public HappinessScore happiness;
     public GameObject HappinessLabel;
-    
-
+    public List<AudioSource> audioSources;
     private void Start()
     {
         Instance = this;
