@@ -50,7 +50,7 @@ MonoBehaviour:
   GrowTime: 120
   ValuePerHarvest: 2000
   buttonIndex: 3
-  Price: 1000
+  Price: 3000
 --- !u!114 &2727296953308027765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,11 +178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Marigold2
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 03fe77785bb329f4b8897fcf458231f2,
-        type: 3}
-      propertyPath: m_TagString
-      value: Plant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03fe77785bb329f4b8897fcf458231f2, type: 3}

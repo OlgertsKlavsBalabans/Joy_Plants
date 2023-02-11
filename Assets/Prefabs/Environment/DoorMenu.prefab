@@ -124,7 +124,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7669622523855785724}
+      - m_Target: {fileID: 693730961314471123}
         m_TargetAssemblyTypeName: PotCount, Assembly-CSharp
         m_MethodName: getPot
         m_Mode: 1
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2978851945348525843}
-  - component: {fileID: 7669622523855785724}
+  - component: {fileID: 693730961314471123}
   m_Layer: 0
   m_Name: DoorMenu
   m_TagString: Untagged
@@ -430,7 +430,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7669622523855785724
+--- !u!114 &693730961314471123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36bf4c7b6db316745b91047f116c5bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potPrice: 88130000a861000050c30000a0860100400d03003057050020a10700b0710b0040420f008813000088130000881300008813000088130000881300008813000088130000
+  potPrice: 4416000084e40000a00302001092030076ec060088d709007e1a0d0070991400e5631800869b1a00
   notEnoughLabel: {fileID: 9034847799493389403}
   priceLabel: {fileID: 4258113464831715481}
   doors: {fileID: 5668945889396585059, guid: 31fd8d66db85e3c4eb3ef6b002dd1ff2, type: 3}
